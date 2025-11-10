@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Consulta – filtro por sexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Consulta filtrada por sexo usando fetch de JSON.">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/consulta.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <img src="assets/img/logo.png" width="48" height="48" alt="Logotipo do projeto" class="logo">
+        <div class="titles">
+          <p class="subtitle">Universidade Cruzeiro do Sul</p>
+          <h2 class="page-title">Consulta – filtro por sexo</h2>
+        </div>
+      </div>
+      <nav class="nav" role="navigation" aria-label="Navegação principal">
+        <div class="container">
+          <a href="index.html">Início</a>
+          <a href="consultafiltrada.html">Consulta por sexo</a>
+          <a href="geral.html">Mostrar todos os dados</a>
+          <a href="sobre.html">Sobre os autores</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="container" role="main">
+      <section class="card" aria-labelledby="titulo-form">
+        <h1 id="titulo-form">Consulta – filtro por sexo</h1>
+        <form id="form-consulta" class="form-controls" aria-describedby="ajuda-consulta">
+          <fieldset>
+            <legend>Selecione o sexo</legend>
+            <div class="radios">
+              <div class="radio-item">
+                <input type="radio" id="sexoM" name="sexo" value="M">
+                <label for="sexoM">Masculino</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" id="sexoF" name="sexo" value="F">
+                <label for="sexoF">Feminino</label>
+              </div>
+              <div class="radio-item">
+                <input type="radio" id="sexoO" name="sexo" value="O">
+                <label for="sexoO">Outro</label>
+              </div>
+            </div>
+          </fieldset>
+          <p id="ajuda-consulta" class="muted">Os dados são obtidos de um serviço remoto e filtrados por sexo.</p>
+          <button type="submit" class="btn">Consultar</button>
+        </form>
+      </section>
+
+      <section id="bloco-resultados" class="card" aria-labelledby="titulo-resultados">
+        <h2 id="titulo-resultados">Dados recebidos do servidor, filtrados pelo sexo solicitado</h2>
+        <div id="resultados" class="result-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>Universidade Cruzeiro do Sul — Campi (placeholder): São Paulo, Santo Amaro, Anália Franco, São Miguel, Santo André.</p>
+      </div>
+    </footer>
+  </body>
+  </html>
+

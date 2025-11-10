@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Mostrar os dados retornados pelo servidor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Exibição de HTML retornado pelo servidor via fetch.">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/geral.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <img src="assets/img/logo.png" width="48" height="48" alt="Logotipo do projeto" class="logo">
+        <div class="titles">
+          <p class="subtitle">Universidade Cruzeiro do Sul</p>
+          <h2 class="page-title">Mostrar os dados retornados pelo servidor</h2>
+        </div>
+      </div>
+      <nav class="nav" role="navigation" aria-label="Navegação principal">
+        <div class="container">
+          <a href="index.html">Início</a>
+          <a href="consultafiltrada.html">Consulta por sexo</a>
+          <a href="geral.html">Mostrar todos os dados</a>
+          <a href="sobre.html">Sobre os autores</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="container" role="main">
+      <section class="card" aria-labelledby="titulo-geral">
+        <h1 id="titulo-geral">Mostrar os dados retornados pelo servidor</h1>
+        <p class="muted">Conteúdo abaixo é injetado do servidor remoto como HTML.</p>
+        <section id="conteudo-servidor" class="server-html" aria-live="polite">
+          <div class="loading">Carregando dados…</div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>Universidade Cruzeiro do Sul — Campi (placeholder): São Paulo, Santo Amaro, Anália Franco, São Miguel, Santo André.</p>
+      </div>
+    </footer>
+  </body>
+  </html>
+

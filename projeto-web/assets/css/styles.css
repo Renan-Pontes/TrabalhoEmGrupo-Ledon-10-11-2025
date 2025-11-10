@@ -1,0 +1,137 @@
+/*
+  styles.css — Estilos base e componentes
+  Paleta: primária #3b82f6 | acento #e5edff | fundo #f8fafc
+  Fonte: sistema (Inter/Segoe UI/Arial fallback)
+*/
+
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-primary: #3b82f6;
+  --color-accent: #e5edff;
+  --color-border: #e5e7eb;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.04);
+}
+
+/* Reset mínimo e tipografia */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header e navegação */
+.site-header { background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+.header-inner { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+.logo { border-radius: 8px; }
+.subtitle { margin: 0; color: var(--color-muted); font-size: 0.9rem; }
+.page-title { margin: 2px 0 0; font-size: 1.25rem; }
+
+.nav { background: var(--color-accent); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.nav .container { display: flex; gap: 16px; overflow-x: auto; }
+.nav a { padding: 12px 8px; display: inline-block; color: #1f2937; font-weight: 600; border-bottom: 2px solid transparent; }
+.nav a.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+
+/* Card e utilitários */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: var(--shadow-sm);
+}
+.muted { color: var(--color-muted); }
+.hero { margin: 12px 0; }
+.menu-list ul { list-style: disc; padding-left: 1.25rem; }
+.menu-list li { margin: 6px 0; }
+
+/* Botões */
+.btn {
+  appearance: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  border: 1px solid #2563eb;
+  font-weight: 600;
+}
+.btn:hover { filter: brightness(0.96); }
+.btn:focus { outline: 3px solid rgba(59,130,246,0.35); outline-offset: 2px; }
+
+/* Formulário consulta */
+.form-controls fieldset { border: 1px solid var(--color-border); border-radius: 10px; padding: 12px; }
+.radios { display: flex; flex-wrap: wrap; gap: 16px; margin: 8px 0 4px; }
+.radio-item { display: flex; align-items: center; gap: 8px; }
+
+/* Alertas */
+.alert {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+/* Grid de resultados (duas colunas responsivas) */
+.result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; margin-top: 8px; }
+.resultado-item {
+  background: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px;
+}
+.resultado-item .nome { font-weight: 700; }
+.resultado-item .meta { color: var(--color-muted); }
+
+/* HTML do servidor (tabelas etc.) */
+.server-html table { width: 100%; border-collapse: collapse; }
+.server-html th, .server-html td { border: 1px solid var(--color-border); padding: 8px; }
+.server-html th { background: #f1f5f9; text-align: left; }
+.loading { color: var(--color-muted); }
+
+/* Grid de autores */
+.autores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.autores-grid figure {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 12px;
+  text-align: center;
+}
+.autores-grid img { width: 100%; height: auto; border-radius: 10px; }
+.autores-grid figcaption { margin-top: 8px; font-weight: 600; }
+
+/* Rodapé */
+.site-footer { margin-top: 24px; border-top: 1px solid var(--color-border); background: var(--color-surface); }
+.site-footer .container { padding: 16px 16px 24px; }
+
+/* Responsividade básica */
+@media (max-width: 480px) {
+  .nav .container { gap: 8px; }
+  .page-title { font-size: 1.1rem; }
+}
+
